@@ -25,14 +25,14 @@ public class MainController implements Initializable
 	public void initialize(URL arg0, ResourceBundle arg1) 
 	{
 		// TODO Auto-generated method stub
-		comboBox.setItems(list);
+		//comboBox.setItems(list);
 	}
 	
 	//for Listener
 	public void ComboChanged(ActionEvent event)
 	{
-		//myLabel.setText(comboBox.getValue());
-		comboBox.getItems().addAll("BC","SK","MB");
+		myLabel.setText(comboBox.getValue());
+		//comboBox.getItems().addAll("BC","SK","MB");
 	}
 	public void buttonAction(ActionEvent event)
 	{
