@@ -34,5 +34,10 @@ public class MainController implements Initializable
 		//myLabel.setText(comboBox.getValue());
 		comboBox.getItems().addAll("BC","SK","MB");
 	}
+	public void buttonAction(ActionEvent event)
+	{
+		//myLabel.setText(comboBox.getValue());
+		comboBox.getItems().addAll("BC","SK","MB");
+	}
 
 }
