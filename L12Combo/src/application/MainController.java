@@ -25,7 +25,7 @@ public class MainController implements Initializable
 	public void initialize(URL arg0, ResourceBundle arg1) 
 	{
 		// TODO Auto-generated method stub
-		//comboBox.setItems(list);
+		comboBox.setItems(list);
 	}
 	
 	//for Listener
