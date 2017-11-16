@@ -22,9 +22,9 @@ public class MainController implements Initializable
 	{
 		TreeItem<String> root= new TreeItem<>("Root", new ImageView(icon));
 		
-		TreeItem<String> noodA= new TreeItem<>("nood A");
-		TreeItem<String> noodB= new TreeItem<>("nood B");
-		TreeItem<String> noodC= new TreeItem<>("nood C");
+		TreeItem<String> noodA= new TreeItem<>("nood A", new ImageView(icon));
+		TreeItem<String> noodB= new TreeItem<>("nood B", new ImageView(icon));
+		TreeItem<String> noodC= new TreeItem<>("nood C", new ImageView(icon));
 		
 		root.getChildren().addAll(noodA,noodB,noodC);
 		
@@ -32,9 +32,9 @@ public class MainController implements Initializable
 		root.getChildren().add(noodB);
 		root.getChildren().add(noodC);*/
 		
-		TreeItem<String> noodA1= new TreeItem<>("nood A 1");
-		TreeItem<String> noodB1= new TreeItem<>("nood B 1");
-		TreeItem<String> noodC1= new TreeItem<>("nood C 1");
+		TreeItem<String> noodA1= new TreeItem<>("nood A 1", new ImageView(icon));
+		TreeItem<String> noodB1= new TreeItem<>("nood B 1", new ImageView(icon));
+		TreeItem<String> noodC1= new TreeItem<>("nood C 1", new ImageView(icon));
 		noodA.getChildren().addAll(noodA1,noodB1,noodC1);
 		
 		treeView.setRoot(root);
