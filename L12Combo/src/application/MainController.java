@@ -1,6 +1,7 @@
 package application;
 
 import java.net.URL;
+import java.util.Iterator;
 import java.util.ResourceBundle;
 
 import javax.activation.ActivationDataFlavor;
@@ -48,7 +49,14 @@ public class MainController implements Initializable
 	{
 		//myLabel.setText(comboBox.getValue());
 		//comboBox.getItems().addAll("BC","SK","MB");
-		myListView.getItems().addAll("BC","SK","MB");
+		//myListView.getItems().addAll("BC","SK","MB");
+		ObservableList<String > provience;
+		provience= myListView.getSelectionModel().getSelectedItems();
+		for (String name : provience) 
+		{
+			System.out.println(name);
+		}
+		
 	}
 
 }
