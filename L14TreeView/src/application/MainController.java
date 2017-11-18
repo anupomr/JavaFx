@@ -10,6 +10,7 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 
 public class MainController implements Initializable 
 {
@@ -21,11 +22,12 @@ public class MainController implements Initializable
 	public void initialize(URL arg0, ResourceBundle arg1) 
 	{
 		TreeItem<String> root= new TreeItem<>("Root", new ImageView(icon));
+		root.setExpanded(true);
 		
 		TreeItem<String> noodA= new TreeItem<>("nood A", new ImageView(icon));
 		TreeItem<String> noodB= new TreeItem<>("nood B", new ImageView(icon));
 		TreeItem<String> noodC= new TreeItem<>("nood C", new ImageView(icon));
-		
+		noodA.setExpanded(true);
 		root.getChildren().addAll(noodA,noodB,noodC);
 		
 		/*root.getChildren().add(noodA);
@@ -38,6 +40,12 @@ public class MainController implements Initializable
 		noodA.getChildren().addAll(noodA1,noodB1,noodC1);
 		
 		treeView.setRoot(root);
+	}
+	public void mouseClick(MouseEvent mouseEvent) 
+	{
+		if(mouseEvent.getClickCount()==2) {
+		TreeItem<String> item=treeView.getSelectionModel().getSelectedItem();
+		System.out.println(item.getValue());}
 	}
 
 }
