@@ -11,10 +11,10 @@
    <children>
       <LineChart fx:id="lineChart" title="Line Chart">
         <xAxis>
-          <CategoryAxis side="BOTTOM" />
+          <CategoryAxis label="My X label" side="BOTTOM" />
         </xAxis>
         <yAxis>
-          <NumberAxis side="LEFT" />
+          <NumberAxis label="My Y label" side="LEFT" />
         </yAxis>
       </LineChart>
       <Button layoutX="44.0" layoutY="400.0" mnemonicParsing="false" onAction="#btn" text="Load Chart" />
