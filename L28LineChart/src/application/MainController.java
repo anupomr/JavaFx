@@ -25,7 +25,14 @@ public class MainController {
 		series1.getData().add(new XYChart.Data<String, Number>("Apr",500 ));
 		series1.setName("Pay 2");
 		
-		lineChart.getData().addAll(series, series1);
+		XYChart.Series<String, Number> series2 =new XYChart.Series<String, Number>();
+		series2.getData().add(new XYChart.Data<String, Number>("Jan",300 ));
+		series2.getData().add(new XYChart.Data<String, Number>("Feb",250 ));
+		series2.getData().add(new XYChart.Data<String, Number>("Mar",500 ));
+		series2.getData().add(new XYChart.Data<String, Number>("Apr",350 ));
+		series2.setName("Pay 2");
+		
+		lineChart.getData().addAll(series, series1, series2);
 	}
 
 }
