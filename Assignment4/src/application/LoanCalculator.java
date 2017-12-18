@@ -2,6 +2,7 @@ package application;
 
 
 
+import java.text.DecimalFormat;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -70,6 +71,27 @@ public class LoanCalculator extends Application
 	{
 		launch(args);
 		
+	}
+	
+	public  void calculateLoanPayment() 
+	{
+		DecimalFormat daf2 = new DecimalFormat(".##");
+		double annualInterestRate=(Double.parseDouble(txtAnnualInterestRate.getText().trim()));
+		double loanAmount=(Double.parseDouble(txtLoanAmount.getText().trim()));		
+		int numberOfYears=(Integer.parseInt(txtNumberOfYears.getText().trim()));
+		
+		Loan newLoan=new Loan(annualInterestRate,numberOfYears,loanAmount);
+		txtMonthlyPayment.setText(String.valueOf(daf2.format(newLoan.getMonthlyPayment())));
+		txtTotalPayment.setText(String.valueOf(daf2.format(newLoan.getMonthlyPayment()*numberOfYears*12) ));
+	}
+	
+	public  void clearText() 
+	{
+		 txtAnnualInterestRate.clear();
+		 txtLoanAmount.clear();
+		 txtNumberOfYears.clear();
+		 txtMonthlyPayment.clear();
+		 txtTotalPayment.clear();
 	}
 	
 	
