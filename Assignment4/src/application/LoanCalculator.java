@@ -4,6 +4,7 @@ package application;
 
 import java.text.DecimalFormat;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -63,7 +64,14 @@ public class LoanCalculator extends Application
 		{
 			e.printStackTrace();
 		}
-		
+		calcutate.setOnAction((ActionEvent e)->
+		{
+			this.calculateLoanPayment();
+		});
+		clear.setOnAction((ActionEvent e)->
+		{			
+			this.clearText();
+		});
 		
 	}
 
