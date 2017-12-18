@@ -56,7 +56,7 @@ public class LoanCalculator extends Application
 			gridPane.add(clear, 2, 12);
 			
 			Scene scene = new Scene(gridPane,400,400);
-			
+			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setTitle("Loan Calculator");
 			primaryStage.setScene(scene);
 			primaryStage.show();
