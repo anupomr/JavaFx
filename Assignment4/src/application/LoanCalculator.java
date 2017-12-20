@@ -11,6 +11,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 public class LoanCalculator extends Application
@@ -18,14 +20,16 @@ public class LoanCalculator extends Application
 	TextField txtAnnualInterestRate=new TextField();
 	TextField txtLoanAmount=new TextField();
 	TextField txtNumberOfYears=new TextField();
-	TextField txtMonthlyPayment=new TextField();
+	
+	TextField txtMonthlyPayment=new TextField();	
 	TextField txtTotalPayment=new TextField();
+	
 	Button calcutate=new Button("Calcutate");
 	Button clear = new Button("    Clear    ");
 	
-	String title="  Loan"+"\nCalculator";
+	String title="  Loan  "+" Calculator ";
 	Label lblTitle=new Label(title);
-	 //.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
+	 
 	@Override
 	public void start(Stage primaryStage) throws Exception 
 	{
@@ -35,22 +39,25 @@ public class LoanCalculator extends Application
 			gridPane.setAlignment(Pos.CENTER);
 			gridPane.setVgap(6);
 			gridPane.setHgap(6);
-			gridPane.add(lblTitle, 1, 0);
+			gridPane.add(lblTitle, 0, 0);
+			lblTitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
 			
-			gridPane.add(new Label("Annual Interest Rate"), 0, 1);
-			gridPane.add(txtAnnualInterestRate, 2, 1);
+			gridPane.add(new Label("Annual Interest Rate"), 0, 3);
+			gridPane.add(txtAnnualInterestRate, 2, 3);
 			
-			gridPane.add(new Label("Number Of Years"), 0, 2);
-			gridPane.add(txtNumberOfYears, 2, 2);
+			gridPane.add(new Label("Number Of Years"), 0, 4);
+			gridPane.add(txtNumberOfYears, 2, 4);
 			
-			gridPane.add(new Label("Loan Amount"), 0, 4);
-			gridPane.add(txtLoanAmount, 2, 4);
+			gridPane.add(new Label("Loan Amount"), 0, 5);
+			gridPane.add(txtLoanAmount, 2, 5);
 			
 			gridPane.add(new Label("Monthly Payment"), 0, 6);
 			gridPane.add(txtMonthlyPayment, 2, 6);
+			txtMonthlyPayment.setEditable(false);
 			
 			gridPane.add(new Label("Total payment"), 0, 8);
 			gridPane.add(txtTotalPayment, 2, 8);
+			txtTotalPayment.setEditable(false);
 			
 			gridPane.add(calcutate, 2, 10);
 			gridPane.add(clear, 2, 12);
